@@ -36,7 +36,7 @@ func TestFizzBuzz_3(t *testing.T) {
 		t.Errorf("Total %s returned as %d, expected %d", f, count, targetCount)
 	}
 
-	if !checkLocation(modVal, fb, 2) {
+	if !checkLocation(modVal, f, 2) {
 		t.Errorf("Location %d is %v, expected %s", 2, modVal[2], f)
 	}
 }
