@@ -1,6 +1,6 @@
 package fizzbuzz
 
-func fizzBuzz(n int) []string {
+func FizzBuzz(n int) []string {
 
 	return []string{}
 }
