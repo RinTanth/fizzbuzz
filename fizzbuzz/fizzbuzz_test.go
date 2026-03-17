@@ -26,6 +26,21 @@ func TestFizzBuzz_15(t *testing.T) {
 	}
 }
 
+func TestFizzBuzz_3(t *testing.T) {
+
+	modVal := fizzbuzz.FizzBuzz(3)
+	targetCount := 1
+	count := countTarget(modVal, f)
+
+	if count != targetCount {
+		t.Errorf("Total %s returned as %d, expected %d", f, count, targetCount)
+	}
+
+	if !checkLocation(modVal, fb, 2) {
+		t.Errorf("Location %d is %v, expected %s", 2, modVal[2], f)
+	}
+}
+
 func countTarget(items []string, target string) int {
 	count := 0
 	for _, s := range items {
