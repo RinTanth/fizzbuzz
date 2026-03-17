@@ -2,22 +2,21 @@ package fizzbuzz
 
 import (
 	"fmt"
-	"math"
 )
 
-func FizzBuzz(n float64) (output []string) {
+func FizzBuzz(n int) (output []string) {
 
-	for i := 1.00; i <= n; i++ {
-		if math.Mod(i, 15) != 0 {
-			if math.Mod(i, 3) == 0 {
+	for i := 1; i <= n; i++ {
+		if i%15 != 0 {
+			if i%3 == 0 {
 				output = append(output, "Fizz")
 				continue
 			}
-			if math.Mod(i, 5) == 0 {
+			if i%5 == 0 {
 				output = append(output, "Buzz")
 				continue
 			}
-			output = append(output, fmt.Sprintf("%.0f", i))
+			output = append(output, fmt.Sprintf("%d", i))
 			continue
 		}
 		output = append(output, "FizzBuzz")
