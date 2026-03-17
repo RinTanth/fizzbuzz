@@ -1,6 +1,7 @@
 package fizzbuzz
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -12,9 +13,13 @@ func FizzBuzz(n float64) (output []string) {
 				output = append(output, "Fizz")
 				continue
 			}
+			output = append(output, fmt.Sprintf("%.0f", i))
+			continue
 		}
 		output = append(output, "FizzBuzz")
 		continue
 	}
+
+	fmt.Println(output)
 	return
 }
