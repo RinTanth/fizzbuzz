@@ -20,6 +20,10 @@ func TestFizzBuzz_15(t *testing.T) {
 	if count != targetCount {
 		t.Errorf("Total %s returned as %d, expected %d", fb, count, targetCount)
 	}
+
+	if !checkLocation(modVal, fb, 14) {
+		t.Errorf("Location %d is %v, expected %s", 14, modVal[14], fb)
+	}
 }
 
 func countTarget(items []string, target string) int {
@@ -30,4 +34,8 @@ func countTarget(items []string, target string) int {
 		}
 	}
 	return count
+}
+
+func checkLocation(items []string, target string, location int) bool {
+	return items[location] == target
 }
