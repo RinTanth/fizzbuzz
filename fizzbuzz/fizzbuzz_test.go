@@ -2,27 +2,32 @@ package fizzbuzz_test
 
 import (
 	"fizzbuzz/fizzbuzz"
-	"slices"
 	"testing"
 )
 
-type mockMod struct {
-	modValue float64
+var (
+	fb = "FizzBuzz"
+	f  = "Fizz"
+	b  = "Buzz"
+)
+
+func TestFizzBuzz_15(t *testing.T) {
+
+	modVal := fizzbuzz.FizzBuzz(15)
+	targetCount := 1
+	count := countTarget(modVal, fb)
+
+	if count != targetCount {
+		t.Errorf("Total %s returned as %d, expected %d", fb, count, targetCount)
+	}
 }
 
-func (m *mockMod) Mod(x, y float64) float64 {
-	return m.modValue
-}
-
-func TestFizzBuzz(t *testing.T) {
-	mock := &mockMod{
-		modValue: 0,
+func countTarget(items []string, target string) int {
+	count := 0
+	for _, s := range items {
+		if s == target {
+			count++
+		}
 	}
-
-	modVal := fizzbuzz.FizzBuzz(mock, 1)
-
-	if !slices.Equal(modVal, []string{"FizzBuzz"}) {
-		t.Errorf("ExecQuery() returned %s, expected FizzBuzz", modVal)
-	}
-
+	return count
 }
