@@ -13,6 +13,10 @@ func FizzBuzz(n float64) (output []string) {
 				output = append(output, "Fizz")
 				continue
 			}
+			if math.Mod(i, 5) == 0 {
+				output = append(output, "Buzz")
+				continue
+			}
 			output = append(output, fmt.Sprintf("%.0f", i))
 			continue
 		}
