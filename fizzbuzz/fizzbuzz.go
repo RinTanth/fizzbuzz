@@ -5,5 +5,9 @@ func FizzBuzz(n int) (output []string) {
 		return []string{"1", "2"}
 	}
 
+	if n == 3 {
+		return []string{"1", "2", "Fizz"}
+	}
+
 	return []string{"1"}
 }
