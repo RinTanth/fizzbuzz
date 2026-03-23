@@ -95,3 +95,20 @@ func TestFizzBuzz5(t *testing.T) {
 		}
 	}
 }
+
+func TestFizzBuzz6(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(6)
+
+	expected := []string{"1", "2", "Fizz", "4", "Buzz", "Fizz"}
+
+	if len(output) != len(expected) {
+		t.Errorf("length mismatch: got %d, want %d", len(output), len(expected))
+		return
+	}
+
+	for i, v := range output {
+		if v != expected[i] {
+			t.Errorf("at index %d: got %q, want %q", i, v, expected[i])
+		}
+	}
+}
