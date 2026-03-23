@@ -9,6 +9,10 @@ func FizzBuzz(n int) (output []string) {
 			output = append(output, "Fizz")
 			continue
 		}
+		if i%5 == 0 {
+			output = append(output, "Buzz")
+			continue
+		}
 		output = append(output, strconv.Itoa(i))
 	}
 
