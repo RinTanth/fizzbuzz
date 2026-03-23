@@ -248,3 +248,20 @@ func TestFizzBuzz14(t *testing.T) {
 		}
 	}
 }
+
+func TestFizzBuzz15(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(15)
+
+	expected := []string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"}
+
+	if len(output) != len(expected) {
+		t.Errorf("length mismatch: got %d, want %d", len(output), len(expected))
+		return
+	}
+
+	for i, v := range output {
+		if v != expected[i] {
+			t.Errorf("at index %d: got %q, want %q", i, v, expected[i])
+		}
+	}
+}
