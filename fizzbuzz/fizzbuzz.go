@@ -1,13 +1,16 @@
 package fizzbuzz
 
+import "strconv"
+
 func FizzBuzz(n int) (output []string) {
-	if n == 2 {
-		return []string{"1", "2"}
+
+	for i := 1; i <= n; i++ {
+		if i%3 == 0 {
+			output = append(output, "Fizz")
+			continue
+		}
+		output = append(output, strconv.Itoa(i))
 	}
 
-	if n == 3 {
-		return []string{"1", "2", "Fizz"}
-	}
-
-	return []string{"1"}
+	return
 }
