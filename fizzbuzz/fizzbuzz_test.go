@@ -5,12 +5,6 @@ import (
 	"testing"
 )
 
-var (
-	fb = "FizzBuzz"
-	f  = "Fizz"
-	b  = "Buzz"
-)
-
 func TestFizzBuzz1(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(1)
 
