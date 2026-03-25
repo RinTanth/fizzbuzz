@@ -5,6 +5,10 @@ func FizzBuzz(n int) (output string) {
 		return "2"
 	}
 
+	if n == 4 {
+		return "4"
+	}
+
 	if n == 3 {
 		return "Fizz"
 	}
