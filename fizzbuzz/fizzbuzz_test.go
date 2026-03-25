@@ -5,45 +5,36 @@ import (
 	"testing"
 )
 
-func TestFizzBuzz1(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(1)
-
-	expected := "1"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+func TestNormalCases(t *testing.T) {
+	tests := []struct {
+		input int
+		want  string
+	}{
+		{1, "1"},
+		{2, "2"},
+		{4, "4"},
+		{7, "7"},
+		{8, "8"},
+		{11, "11"},
+		{13, "13"},
+		{14, "14"},
 	}
 
-}
-
-func TestFizzBuzz2(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(2)
-
-	expected := "2"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	for _, tt := range tests {
+		output := fizzbuzz.FizzBuzz(tt.input)
+		if output != tt.want {
+			t.Errorf("Output got %s, want %s", output, tt.want)
+		}
 	}
-
 }
 
 func TestFizzBuzz3Fizz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(3)
 
-	expected := "Fizz"
+	want := "Fizz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-func TestFizzBuzz4(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(4)
-
-	expected := "4"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -51,10 +42,10 @@ func TestFizzBuzz4(t *testing.T) {
 func TestFizzBuzz5Buzz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(5)
 
-	expected := "Buzz"
+	want := "Buzz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -62,31 +53,10 @@ func TestFizzBuzz5Buzz(t *testing.T) {
 func TestFizzBuzz6Fizz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(6)
 
-	expected := "Fizz"
+	want := "Fizz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-
-func TestFizzBuzz7(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(7)
-
-	expected := "7"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-func TestFizzBuzz8(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(8)
-
-	expected := "8"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -94,10 +64,10 @@ func TestFizzBuzz8(t *testing.T) {
 func TestFizzBuzz9Fizz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(6)
 
-	expected := "Fizz"
+	want := "Fizz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -105,21 +75,10 @@ func TestFizzBuzz9Fizz(t *testing.T) {
 func TestFizzBuzz10Buzz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(10)
 
-	expected := "Buzz"
+	want := "Buzz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-
-func TestFizzBuzz11(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(11)
-
-	expected := "11"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -127,32 +86,10 @@ func TestFizzBuzz11(t *testing.T) {
 func TestFizzBuzz12Fizz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(12)
 
-	expected := "Fizz"
+	want := "Fizz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-
-func TestFizzBuzz13(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(13)
-
-	expected := "13"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
-	}
-
-}
-
-func TestFizzBuzz14(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(14)
-
-	expected := "14"
-
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
@@ -160,10 +97,10 @@ func TestFizzBuzz14(t *testing.T) {
 func TestFizzBuzz15Fizz(t *testing.T) {
 	output := fizzbuzz.FizzBuzz(15)
 
-	expected := "FizzBuzz"
+	want := "FizzBuzz"
 
-	if output != expected {
-		t.Errorf("Output got %s, expected %s", output, expected)
+	if output != want {
+		t.Errorf("Output got %s, want %s", output, want)
 	}
 
 }
