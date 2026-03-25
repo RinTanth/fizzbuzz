@@ -18,3 +18,10 @@ func FizzBuzz(n int) (output string) {
 
 	return strconv.Itoa(n)
 }
+
+func Business(n int) (output []string) {
+	for i := 1; i <= n; i++ {
+		output = append(output, FizzBuzz(i))
+	}
+	return
+}
