@@ -112,3 +112,47 @@ func TestFizzBuzz10Buzz(t *testing.T) {
 	}
 
 }
+
+func TestFizzBuzz11(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(11)
+
+	expected := "11"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
+
+func TestFizzBuzz12Fizz(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(12)
+
+	expected := "Fizz"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
+
+func TestFizzBuzz13(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(13)
+
+	expected := "13"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
+
+func TestFizzBuzz14(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(14)
+
+	expected := "14"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
