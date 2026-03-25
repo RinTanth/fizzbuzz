@@ -90,3 +90,14 @@ func TestFizzBuzz8(t *testing.T) {
 	}
 
 }
+
+func TestFizzBuzz9Fizz(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(6)
+
+	expected := "Fizz"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
