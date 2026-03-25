@@ -6,7 +6,7 @@ import (
 
 func TestNormalCases(t *testing.T) {
 	tests := []struct {
-		input int
+		input uint
 		want  string
 	}{
 		{1, "1"},

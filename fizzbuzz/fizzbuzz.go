@@ -1,8 +1,8 @@
 package fizzbuzz
 
-import "strconv"
+import "fmt"
 
-func fb(n int) (output string) {
+func fb(n uint) (output string) {
 
 	if n%15 == 0 {
 		return "FizzBuzz"
@@ -16,11 +16,11 @@ func fb(n int) (output string) {
 		return "Buzz"
 	}
 
-	return strconv.Itoa(n)
+	return fmt.Sprintf("%d", n)
 }
 
-func FB(n int) (output []string) {
-	for i := 1; i <= n; i++ {
+func FB(n uint) (output []string) {
+	for i := uint(1); i <= n; i++ {
 		output = append(output, fb(i))
 	}
 	return
