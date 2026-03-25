@@ -1,7 +1,6 @@
-package fizzbuzz_test
+package fizzbuzz
 
 import (
-	"fizzbuzz/fizzbuzz"
 	"testing"
 )
 
@@ -21,7 +20,7 @@ func TestNormalCases(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		output := fizzbuzz.FizzBuzz(tt.input)
+		output := fb(tt.input)
 		if output != tt.want {
 			t.Errorf("Output got %s, want %s", output, tt.want)
 		}
@@ -29,7 +28,7 @@ func TestNormalCases(t *testing.T) {
 }
 
 func TestFizzBuzz3Fizz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(3)
+	output := fb(3)
 
 	want := "Fizz"
 
@@ -40,7 +39,7 @@ func TestFizzBuzz3Fizz(t *testing.T) {
 }
 
 func TestFizzBuzz5Buzz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(5)
+	output := fb(5)
 
 	want := "Buzz"
 
@@ -51,7 +50,7 @@ func TestFizzBuzz5Buzz(t *testing.T) {
 }
 
 func TestFizzBuzz6Fizz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(6)
+	output := fb(6)
 
 	want := "Fizz"
 
@@ -62,7 +61,7 @@ func TestFizzBuzz6Fizz(t *testing.T) {
 }
 
 func TestFizzBuzz9Fizz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(6)
+	output := fb(6)
 
 	want := "Fizz"
 
@@ -73,7 +72,7 @@ func TestFizzBuzz9Fizz(t *testing.T) {
 }
 
 func TestFizzBuzz10Buzz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(10)
+	output := fb(10)
 
 	want := "Buzz"
 
@@ -84,7 +83,7 @@ func TestFizzBuzz10Buzz(t *testing.T) {
 }
 
 func TestFizzBuzz12Fizz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(12)
+	output := fb(12)
 
 	want := "Fizz"
 
@@ -95,7 +94,7 @@ func TestFizzBuzz12Fizz(t *testing.T) {
 }
 
 func TestFizzBuzz15Fizz(t *testing.T) {
-	output := fizzbuzz.FizzBuzz(15)
+	output := fb(15)
 
 	want := "FizzBuzz"
 

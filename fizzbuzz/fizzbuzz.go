@@ -2,7 +2,7 @@ package fizzbuzz
 
 import "strconv"
 
-func FizzBuzz(n int) (output string) {
+func fb(n int) (output string) {
 
 	if n%15 == 0 {
 		return "FizzBuzz"
@@ -19,9 +19,9 @@ func FizzBuzz(n int) (output string) {
 	return strconv.Itoa(n)
 }
 
-func Business(n int) (output []string) {
+func FB(n int) (output []string) {
 	for i := 1; i <= n; i++ {
-		output = append(output, FizzBuzz(i))
+		output = append(output, fb(i))
 	}
 	return
 }
