@@ -101,3 +101,14 @@ func TestFizzBuzz9Fizz(t *testing.T) {
 	}
 
 }
+
+func TestFizzBuzz10Buzz(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(10)
+
+	expected := "Buzz"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
