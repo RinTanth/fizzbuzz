@@ -13,5 +13,9 @@ func FizzBuzz(n int) (output string) {
 		return "Fizz"
 	}
 
+	if n == 5 {
+		return "Buzz"
+	}
+
 	return "1"
 }
