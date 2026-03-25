@@ -15,3 +15,14 @@ func TestFizzBuzz1(t *testing.T) {
 	}
 
 }
+
+func TestFizzBuzz2(t *testing.T) {
+	output := fizzbuzz.FizzBuzz(2)
+
+	expected := "2"
+
+	if output != expected {
+		t.Errorf("Output got %s, expected %s", output, expected)
+	}
+
+}
