@@ -4,19 +4,21 @@ import "fmt"
 
 func fb(n uint) (output string) {
 
-	if n%15 == 0 {
-		return "FizzBuzz"
-	}
-
 	if n%3 == 0 {
-		return "Fizz"
+		output += "Fizz"
 	}
 
 	if n%5 == 0 {
-		return "Buzz"
+		output += "Buzz"
 	}
 
-	return fmt.Sprintf("%d", n)
+	switch output {
+	case "":
+		return fmt.Sprintf("%d", n)
+	default:
+		return output
+	}
+
 }
 
 func FB(n uint) (output []string) {
