@@ -4,26 +4,22 @@ import "fmt"
 
 func fb(n uint) (output string) {
 
-	if n%3 == 0 {
-		output += "Fizz"
+	divider := []uint{15, 3, 5}
+	textOutput := []string{"FizzBuzz", "Fizz", "Buzz"}
+
+	for i, v := range divider {
+		if n%v == 0 {
+			return textOutput[i]
+		}
 	}
 
-	if n%5 == 0 {
-		output += "Buzz"
-	}
-
-	switch output {
-	case "":
-		return fmt.Sprintf("%d", n)
-	default:
-		return output
-	}
-
+	return fmt.Sprintf("%d", n)
 }
 
 func FB(n uint) (output []string) {
 	for i := uint(1); i <= n; i++ {
 		output = append(output, fb(i))
 	}
+	fmt.Println(output)
 	return
 }
