@@ -2,18 +2,14 @@ package fizzbuzz
 
 import "fmt"
 
-func fb(n uint) (output string) {
+func fb(n uint) string {
+	fizz := map[bool]string{true: "Fizz", false: ""}
+	buzz := map[bool]string{true: "Buzz", false: ""}
+	text := fizz[n%3 == 0] + buzz[n%5 == 0]
 
-	divider := []uint{15, 3, 5}
-	textOutput := []string{"FizzBuzz", "Fizz", "Buzz"}
+	num := map[bool]string{true: fmt.Sprintf("%d", n), false: ""}
 
-	for i, v := range divider {
-		if n%v == 0 {
-			return textOutput[i]
-		}
-	}
-
-	return fmt.Sprintf("%d", n)
+	return num[text == ""] + text
 }
 
 func FB(n uint) (output []string) {
